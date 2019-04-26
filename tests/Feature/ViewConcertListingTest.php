@@ -5,17 +5,20 @@ namespace Tests\Feature;
 use Tests\TestCase;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 
-class ExampleTest extends TestCase
+class ViewConcertListingTest extends TestCase
 {
-    /**
-     * A basic test example.
-     *
-     * @return void
-     */
-    public function testBasicTest()
-    {
-        $response = $this->get('/');
+    /** @test */
+    function user_can_view_a_concert_listing()
 
-        $response->assertStatus(200);
+    {
+        $concert = Concert::create([
+            'title' => 'The Sonics',
+            'subtitle' => 'with',
+            'date' => Carbon::parse('November 13, 2019 9:00pm'),
+            
+
+
+
+        ]);
     }
 }
