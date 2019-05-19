@@ -13,7 +13,7 @@ class ViewConcertListingTest extends TestCase
 
 
 {
-    
+
     use DatabaseMigrations;
     /** @test */
     function user_can_view_a_concert_listing()
@@ -36,8 +36,8 @@ class ViewConcertListingTest extends TestCase
 
         $this->visit('/concerts/' . $concert->id);
 
-        $this->assertSee('The Sonics');
-        $this->assertSee('with The Wailers and the Jimi Hendrix Experience');
+        $this->see('The Sonics');
+        $this->see('with The Wailers and the Jimi Hendrix Experience');
         $this->see('November 13, 2019');
         $this->see('9:00pm');
         $this->see('3250');
